@@ -1,0 +1,125 @@
+/* LoginPage.css */
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #dd521b, #0543ed);
+  }
+  
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.5) 100%);
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s, transform 0.5s; /* Smooth transitions for opacity and transform */
+    transform: scale(0);
+  }
+  
+  .login-form {
+    width: 300px; /* Fixed width */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d3cfd2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: flyIn 0.5s ease forwards;
+    transform: scale(0);
+    margin-right: 150px;
+    min-width: 300px;
+  }
+  
+  .welcome-message {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-right: 400px;
+  
+  }
+  
+  .welcome-message h2 {
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message p {
+    margin-bottom: 30px;
+  }
+  
+  .login-form:hover {
+    transform: translateY(-5px); /* Move the form up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login-form input[type='text'],
+  .login-form input[type='password'] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; 
+  }
+  
+  .login-form button {
+    width: 40%;
+    padding: 9px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 1ms;
+  }
+  
+  .login-form button:hover {
+    background-color: #223e5c;
+  }
+  
+  @keyframes flyIn {
+    from {
+      transform: translateX(+100%); /* Start off-screen to the left */
+      opacity: 0; /* Start invisible */
+    }
+    to {
+      transform: translateX(0); /* Move to original position */
+      opacity: 1; /* Fade in */
+    }
+  }
+  
+  .forgot-password {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: #840606;
+    text-decoration: none;
+  }
+  
+  .question-mark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .terms-checkbox label {
+    font-size: 16px;
+    color: #666;
+  }
+  
